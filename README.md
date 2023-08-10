@@ -5,6 +5,9 @@
  -CSS, and 
  -VanillaJs, It is responsive across all device screens.
 
+### preview the live site here
+[Plumbfix](https://plumbfix-plumbing-service.vercel.app)
+
 ## CREATOR ##
 
 👤 **JUBILANT AGIDA**
