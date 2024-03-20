@@ -65,7 +65,6 @@ svg
 }
 
 img
-
 {
     width: 100%;
 }
@@ -76,6 +75,28 @@ footer
     max-width: 1440px;
     margin: 0 auto;
 
+}
+
+.left-hidden,
+.right-hidden {
+    opacity: 0;
+    filter: blur(5px);
+    visibility: hidden;
+}
+
+.left-hidden {
+    transform: translateX(-100px);
+}
+
+.right-hidden {
+    transform: translateX(100px);
+}
+
+.display {
+    transform: translateX(0px);
+    opacity: 1;
+    filter: blur(0px);
+    visibility: visible;
 }
 .logo
 {
@@ -160,6 +181,7 @@ aside p
     text-align: center;
     color:  var(--light-blue);
     padding: 1rem;
+    margin: 2rem 0;
     font-size: 3rem;
 }
 .services-flex
@@ -199,6 +221,9 @@ aside p
     padding: 10px;
     color: #fff;
 }
+svg {
+    margin: 0px 2.4rem;
+}
 .testimonials .card-flex
 {
     display: flex;
@@ -207,8 +232,8 @@ aside p
 .testimonials .card p
 {
     font-size: 1.8rem;
-    padding: 40px;
-    margin: 8px;
+    padding: 30px;
+        margin: 0px 2.4rem;
     border: var(--lighter-blue) 1px solid;
     line-height: 1.5;
     color: #fff;
@@ -247,7 +272,7 @@ aside p
 }
 .contact form
 {
-    flex: 1 1 23rem;
+    flex: 1 1 43rem;
 }
 .contact .inputBox
 {
@@ -257,16 +282,15 @@ aside p
     outline: none;
     padding: 5px;
     margin: 2.7rem;
-    width: fit-content;
+    max-width: 70%;
 }
 .contact .inputBox input
 {
     display: inline-block;
     border: none;
     place-items: center;
-    padding: 15px;
+    padding: 10px;
     background: inherit;
-    max-width: 100%;
 }
 .contact .inputBox svg
 {
@@ -280,9 +304,10 @@ aside p
 {
     border: 1px solid var(--lighter-blue);
     background: inherit;
-    padding: 5px;
+    padding: 10px 100px 50px 10px;
     display: block;
     margin: 2.7rem;
+
 }
 .contact textarea:focus
 {

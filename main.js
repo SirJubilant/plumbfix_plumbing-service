@@ -1,6 +1,8 @@
 let menu = document.querySelector('.hamburger');
 let close = document.querySelector('.close');
 let navlist = document.querySelector('.nav');
+const rightHidden = document.querySelectorAll('.right-hidden');
+const leftHidden = document.querySelectorAll('.left-hidden');
 
 menu.addEventListener("click", ()=> {
     navlist.classList.toggle('active');
@@ -29,3 +31,21 @@ window.onscroll = () => {
         menu.classList.add('menu-active')
     }
 };
+
+// intersection obsever animations
+
+ const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry);
+
+        entry.isIntersecting && entry.target.classList.add('display');
+        // if (entry.isIntersecting) observer.unobserve(entry.target)
+
+    })
+  }, {
+    threshold: 0.5,
+  }
+  );
+
+  leftHidden.forEach((el) => observer.observe(el));
+  rightHidden.forEach((el) => observer.observe(el));
